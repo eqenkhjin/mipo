@@ -10,7 +10,6 @@
 <!--    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Comfortaa">-->
   </head>
   <body>
-      test
         <div class="container">
             <?php // include_partial('public/header', array('mipo' => 'Social Network')) ?>
             <?php include_component('public', 'header'); ?>
