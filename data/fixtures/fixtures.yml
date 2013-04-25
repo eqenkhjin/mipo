@@ -1,0 +1,109 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+AmUser:
+  hishigt:
+    firstname:    'Батхишигт'
+    lastname:     'Умааахан'
+    email:        'hishigt@yahoo.com'
+    username:     'hishigt'
+    display_name: 'У.Батхишигт'
+    password:     good
+    avatar:       '/uploads/profile/hishigt.jpg'
+    small_avatar: '/uploads/profile/hishigt.jpg'
+    large_avatar: '/uploads/profile/hishigt.jpg'
+    mgl_avatar:       ''
+    mgl_small_avatar: ''
+    mgl_large_avatar: ''
+    verified:     true
+  bebe:
+    firstname:    'Билгүүн'
+    lastname:     'Бат-Эрдэнэ'
+    email:        'bebe@yahoo.com'
+    username:     'bebe'
+    display_name: 'Б.Билгүүн'
+    password:     good
+    avatar:       '/uploads/profile/bebe.jpg'
+    small_avatar: '/uploads/profile/bebe.jpg'
+    large_avatar: '/uploads/profile/bebe.jpg'
+    mgl_avatar:       ''
+    mgl_small_avatar: ''
+    mgl_large_avatar: ''
+    verified:     true
+  dulguun:
+    firstname:    'Дөлгөөн'
+    lastname:     'Баяртогтох'
+    email:        'dulguun@yahoo.com'
+    username:     'dulguun'
+    display_name: 'Б.Дөлгөөн'
+    password:     good
+    avatar:       '/uploads/profile/dulguun.jpg'
+    small_avatar: '/uploads/profile/dulguun.jpg'
+    large_avatar: '/uploads/profile/dulguun.jpg'
+    mgl_avatar:       '/uploads/profile/mgl/dulguun.png'
+    mgl_small_avatar: '/uploads/profile/mgl/dulguun.png'
+    mgl_large_avatar: '/uploads/profile/mgl/dulguun.png'
+    verified:     true
+  lkhagva:
+    firstname:    'Лхагва-Очир'
+    lastname:     'Нармандах'
+    email:        'n.lkhagva_ochir@yahoo.com'
+    username:     'nlkhagva'
+    display_name: 'Н.Лхагва-Очир'
+    password:     good
+    avatar:       '/uploads/profile/lkhagva.jpg'
+    small_avatar: '/uploads/profile/lkhagva.jpg'
+    large_avatar: '/uploads/profile/lkhagva.jpg'
+    mgl_avatar:       '/uploads/profile/mgl/lkhagva.png'
+    mgl_small_avatar: '/uploads/profile/mgl/lkhagva.png'
+    mgl_large_avatar: '/uploads/profile/mgl/lkhagva.png'
+    verified:     true
+  enkhjina:
+    firstname:    'Энхжин'
+    lastname:     'Амарсайхан'
+    email:        'eq@yahoo.com'
+    username:     'eq'
+    display_name: 'А.Энхжин'
+    password:     good
+    avatar:       '/uploads/profile/eq.jpg'
+    small_avatar: '/uploads/profile/eq.jpg'
+    large_avatar: '/uploads/profile/eq.jpg'
+    mgl_avatar:       '/uploads/profile/mgl/enkhjin.png'
+    mgl_small_avatar: '/uploads/profile/mgl/enkhjin.png'
+    mgl_large_avatar: '/uploads/profile/mgl/enkhjin.png'
+    verified:     true
+  enkhjine:
+    firstname:    'Энхжин'
+    lastname:     'Энхбаяр'
+    email:        'enkhjin@yahoo.com'
+    username:     'enkhjin'
+    display_name: 'Э.Энхжин'
+    password:     good
+    avatar:       '/uploads/profile/enkhjine.jpg'
+    small_avatar: '/uploads/profile/enkhjine.jpg'
+    large_avatar: '/uploads/profile/enkhjine.jpg'
+    mgl_avatar:       '/uploads/profile/mgl/enkhjin.png'
+    mgl_small_avatar: '/uploads/profile/mgl/enkhjin.png'
+    mgl_large_avatar: '/uploads/profile/mgl/enkhjin.png'
+    verified:     true
+  group_admin:
+    email: 'admin@admin.com'
+    password: admin
+    firstname:    'Admin'
+    lastname:     'Admin'
+    
+

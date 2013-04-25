@@ -1,0 +1,112 @@
+.rounded(@radius: 10px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@mainmenu_border_color: #fe3535;
+
+@mainmenu_bg_color1: #ff6666;
+@mainmenu_bg_color2: #ff8080;
+@mainmenu_bg_color3: #ff9999;
+
+@top_bar_height: 40px;
+
+@font-face{
+    font-family: "Mon-Taurus";
+    src: url('fonts/MonTaurus.ttf'),
+        url('fonts/MonTaurus.eot'); /* IE9+ */
+}
+
+
+body{ font-family: "Mon-Taurus"; }
+
+#header{ padding-top: 10px; position: absolute; z-index: 2; }
+
+#mainnav{ display: block; overflow: hidden;border: 1px solid @mainmenu_border_color; margin: 0px; padding: 0 0; .rounded(@top_bar_height/2); box-shadow: 0 1px 3px 0px rgba(0,0,0,.3);
+    background-color: @mainmenu_bg_color1; 
+    background: #ff6666; /* Old browsers */
+    background: -moz-linear-gradient(left,  @mainmenu_bg_color1 0%, @mainmenu_bg_color2 25%, @mainmenu_bg_color3 50%, @mainmenu_bg_color2 75%, @mainmenu_bg_color1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(1%,@mainmenu_bg_color1), color-stop(25%,@mainmenu_bg_color2), color-stop(50%,@mainmenu_bg_color3), color-stop(75%,@mainmenu_bg_color2), color-stop(100%,@mainmenu_bg_color1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, @mainmenu_bg_color1 1%,#ff8080 23%,@mainmenu_bg_color3 50%,@mainmenu_bg_color2 75%,@mainmenu_bg_color1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  @mainmenu_bg_color1 0%,@mainmenu_bg_color2 25%,@mainmenu_bg_color3 50%,@mainmenu_bg_color2 75%,@mainmenu_bg_color1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, @mainmenu_bg_color1 0%,@mainmenu_bg_color2 25%,@mainmenu_bg_color3 50%,@mainmenu_bg_color2 75%,@mainmenu_bg_color1 100%); /* IE10+ */
+    background: linear-gradient(to right, @mainmenu_bg_color1 0%,@mainmenu_bg_color2 25%,@mainmenu_bg_color3 50%,@mainmenu_bg_color2 75%,@mainmenu_bg_color1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6666', endColorstr='#ff6666',GradientType=1 ); /* IE6-9 */
+
+    .social-logo{ float: left;  height: @top_bar_height; margin-left: 20px;
+        a{  height: @top_bar_height - 3px; display: table-cell; vertical-align: middle; }
+    }
+
+    ul{ float: left; list-style: none; display: block; overflow: hidden; margin: 0px; padding: 0px;
+        li{ float: left;
+            a{ display: block; overflow: hidden; color: #fff; font-size: 1em; text-transform: uppercase; padding: 0px 15px; margin-right: 0px; height: @top_bar_height; line-height: @top_bar_height + 2; 
+               &:hover{ text-decoration: none; background-color: rgba(255,255,255, .17); 
+                } 
+            }
+        } /* li end. */
+
+        &.mainmenu{ margin-left: 30px; }  
+        &.profile-bar{  float: right; margin-right: @top_bar_height/2 - 10px;
+            
+            @profile-bar-size: 8px;
+            li.my-profile{ margin: @profile-bar-size / 2 10px;  background: rgba(255,255,255, .2); font-size: .8em;
+                @my_profile_a_height : @top_bar_height - @profile-bar-size;
+                .rounded(@my_profile_a_height);
+                
+                &:hover{ background: rgba(255,255,255, .4); }
+
+                a{ float: left; height: @my_profile_a_height - 4px; line-height: @my_profile_a_height + 2px ; padding: 0px;
+                    &.my-profile-image{ overflow: hidden; .rounded(@my_profile_a_height); border: 2px solid #fff; margin-right: 15px;
+                        img{ width: @my_profile_a_height - 4px; vertical-align: initial; }
+                    }
+                    &.my-profile-name{ margin-right: 20px; &:hover{ background: none; } }
+                }
+            }/* my-profile end. */
+
+            .settings{ margin-right: 0px;
+                i.mipo-icon{ margin-top: @top_bar_height/2 - 12px; }
+            }
+        }/* profile-bar  end. */
+    }/* ul end.  */ 
+
+
+} /* #mainmenu end. */
+
+
+#body{ position: absolute; z-index: 1;
+    .main-container{ padding-top: 90px; min-height: 500px; }
+}
+
+@profile_size: 60px;
+@profile_margin_left: -@profile_size;
+
+.profile-homepage-container{ background-color: #f0f0f0; border: 1px solid #ddd; height: @profile_size * 2;  margin-left: @profile_margin_left; .rounded(@profile_size); margin-right: 10px;
+    .profile-image-container{ 
+        .profile-image{ float: left; width: @profile_size * 2 - 6px; height: @profile_size * 2 - 6px;  display: block; overflow: hidden; .rounded(@profile_size); border: 3px solid #fff; }
+        .button-panel{  }
+    } /* profile-image-container end. */
+}/* profile-homepage-container end. */
+
+.notification-container{
+    ul{
+        li{  }
+    }
+}/* notification-container end. */
+
+
+
+
+
+.shadow{ box-shadow: 0px 1px 3px rgba(0,0,0,.5); }
+.shadow-with-inset{ box-shadow: 0px 1px 3px rgba(0,0,0,.5), 0px 1px 3px rgba(0,0,0,.5) inset; }
+
+@icon_size: 23px;
+.mipo-icon{ display: block; height: @icon_size; width: @icon_size; 
+    &.mipo-icon-settings{ background: url(assets/settings.png) no-repeat center center; }
+}
+
+.offset05{ margin-left: 90px !important; }
+.bgWhite{ background-color: #fff }
