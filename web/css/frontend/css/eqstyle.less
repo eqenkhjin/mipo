@@ -1,0 +1,91 @@
+.rounded(@radius: 10px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@mainmenu_border_color: #fe3535;
+
+@mainmenu_bg_color1: #ff6666;
+@mainmenu_bg_color2: #ff8080;
+@mainmenu_bg_color3: #ff9999;
+@wall-left-color: #f0f0f0;
+@wall-left-margin-top: 10px;
+
+@top_bar_height: 58px;    //  top menu height
+@profile_size: 60px;      //  profile-size
+@not_size: 66px;          //  notification height
+@wall-item-height: 200px; //haragdah postnii bagtah hamgiin baga urt
+@wall-item-width: 500px;  // haragdah postnii bagtah orgon
+
+#mainnav{
+  .profile-bar{
+     .dropdown-menu.pull-right{ padding-bottom: 10px;
+       li{float:left;
+         a{
+           display: block; overflow: hidden; width: 169px; color: #444; font-size: 13px; text-transform: none; padding: 0px 15px; margin-right: 0px; height: 25px; line-height: 30px;
+           &:hover{ color: #fff; }
+         }
+       }
+     }
+    }
+  }
+/* wall-item  */
+.wall-item{
+//  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  margin-top:10px;
+  .wall-left{ position: relative;
+    .wall-item-image img{ display: block; overflow: hidden; .rounded(50%); border: 3px solid #fff; position: absolute; z-index: 2;top: 0px; margin-left: -3px;
+
+    }
+    .wall-item-mongol{ top: 0px; margin: 0px -1px; padding-top: 90px; padding-bottom: 5px; .rounded(40px); background-color: #f5f6f6; border: 1px solid #efefef; height: 100%; display: block;  z-index: 1; width: 100%;
+      background-color:@wall-left-color;min-height: 200px;.rounded(40px);
+        img{ width: 45px; margin: 0px 12px; }
+    }
+  }
+
+  .wall-right{ margin: 35px 0; padding: 20px 0px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; position: relative;
+    .wall-label{ position: absolute; display: block; top: -12px; left: 15px; background-color: #fff; font-weight: bold; padding: 0 5px; }
+    .wall-social-icon{  }
+  }
+}/* wall-item end. */
+/*
+.wall-item{
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  float: left; width:@wall-item-width; min-height:@wall-item-height; margin-left: 50px; margin-bottom: 20px; height:auto;
+  .wall-left{
+    float:left; width: 20%; .rounded(@profile_size); position: relative;
+  }
+  .shadow{ box-shadow: 0px 1px 3px rgba(0,0,0,.5); }
+  .wall-item-image{
+      margin-top:@wall-left-margin-top;overflow:hidden;max-width: 100%;height: auto;.rounded(@profile_size);border:3px solid #ffffff;position: relative;position: absolute;
+  }
+  .wall-item-mongol{
+    min-height: @wall-item-height;
+    width: 66%;
+    background-color: @wall-left-color;
+    margin:0px auto;
+    margin-top:66px;
+    .rounded(@profile_size/2);
+  }
+  .wall-right-up{
+    min-width: 65%;font-size: 13px;min-height: 10%;float: left;margin-top:10px;margin-left: 10px;border-bottom: 1px solid #3b5998;
+    a{color:#80809f;text-decoration: none;font-size: 13px;font-weight: bold;}
+    a:hover{text-decoration: underline;
+    }
+  }
+  .wall-right{
+    min-width: 60%;max-width: 70%;min-height: 90%;float: left;margin-left:10px;
+    &.post{font-size:12px;}
+    &.video{background-color:green;}
+  }
+  .wall-right-display-image{width: 40px;height: 40px;margin-left: 16px;background-color: red;float: left;}
+  .wall-right-footer{
+
+  }
+  .wall-right-comment{
+
+  }
+}*/
