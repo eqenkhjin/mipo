@@ -1,0 +1,145 @@
+AmGroupType:
+  grptp1:
+    name:     'Хичээлийн бүлэг'
+  grptp2:
+    name:     'Багшийн бүлэг'
+  grptp3:
+    name:     'Энгийн бүлэг'
+    
+AmGroup:
+  grp:
+    name:      'Алгоритм'
+    AmCreatedUser:    lkhagva
+    AmGroupType: grptp1
+    image:    '/images/group-default.jpg'
+    small_image:    '/images/group-default.jpg'
+    large_image:    '/images/group-default.jpg'
+  grp2:
+    name:      'Багшийн бүлэг'
+    AmCreatedUser:    lkhagva
+    AmGroupType: grptp2
+    image:    '/images/group-default.jpg'
+    small_image:    '/images/group-default.jpg'
+    large_image:    '/images/group-default.jpg'
+  grp3:
+    name:      'МУИС МКС ПХ 2009-2013'
+    AmCreatedUser:    lkhagva
+    AmGroupType: grptp3
+    image:    '/images/group-default.jpg'
+    small_image:    '/images/group-default.jpg'
+    large_image:    '/images/group-default.jpg'
+
+#Group User connection 
+AmGroupUserConn:
+  aguc:
+    AmGroup:   grp
+    AmUser:    lkhagva
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc2:
+    AmGroup:   grp2
+    AmUser:    lkhagva
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc3:
+    AmGroup:   grp3
+    AmUser:    lkhagva
+    year1:     2009
+    year2:     2013
+    is_joined: true
+    is_moderator: true
+  aguc4:
+    AmGroup:   grp
+    AmUser:    dulguun
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc5:
+    AmGroup:   grp2
+    AmUser:    dulguun
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc6:
+    AmGroup:   grp3
+    AmUser:    dulguun
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc7:
+    AmGroup:   grp
+    AmUser:    enkhjina
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc8:
+    AmGroup:   grp2
+    AmUser:    enkhjina
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc9:
+    AmGroup:   grp3
+    AmUser:    enkhjina
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc10:
+    AmGroup:   grp
+    AmUser:    enkhjine
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc11:
+    AmGroup:   grp2
+    AmUser:    enkhjine
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc12:
+    AmGroup:   grp3
+    AmUser:    enkhjine
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc13:
+    AmGroup:   grp
+    AmUser:    bebe
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc14:
+    AmGroup:   grp2
+    AmUser:    bebe
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc15:
+    AmGroup:   grp3
+    AmUser:    bebe
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc16:
+    AmGroup:   grp
+    AmUser:    hishigt
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc17:
+    AmGroup:   grp2
+    AmUser:    hishigt
+    year1:     2009
+    year2:     2013
+    is_joined: true
+  aguc18:
+    AmGroup:   grp3
+    AmUser:    hishigt
+    year1:     2009
+    year2:     2013
+    is_joined: true
+    
+    
+    
