@@ -4,3 +4,4 @@ config/databases.yml
 config/propel.ini
 data/sql/*
 lib/vendor/*
+.idea/*
