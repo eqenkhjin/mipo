@@ -38,6 +38,13 @@ abstract class BaseAmObjectTypeForm extends BaseFormDoctrine
       'am_actions_list'   => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'AmAction', 'required' => false)),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'AmObjectType', 'column' => array('object_model_name'))),
+        new sfValidatorDoctrineUnique(array('model' => 'AmObjectType', 'column' => array('object_table_name'))),
+      ))
+    );
+
     $this->widgetSchema->setNameFormat('am_object_type[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

@@ -54,10 +54,12 @@ abstract class BaseAmObjectType extends sfDoctrineRecord
              ));
         $this->hasColumn('object_model_name', 'string', 100, array(
              'type' => 'string',
+             'unique' => true,
              'length' => 100,
              ));
         $this->hasColumn('object_table_name', 'string', 100, array(
              'type' => 'string',
+             'unique' => true,
              'length' => 100,
              ));
         $this->hasColumn('body', 'string', 255, array(
