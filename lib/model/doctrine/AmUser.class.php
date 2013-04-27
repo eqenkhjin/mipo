@@ -12,6 +12,11 @@
  */
 class AmUser extends BaseAmUser
 {
+  public function isMyFriend($check_user_id = 0)
+  {
+      
+  }
+    
     
   public function setPassword($password)
   {

@@ -26,7 +26,18 @@
                                     <dd>Програм хангамж</dd>
                                 </dl>
 
-                                <a href="<?php echo url_for('user/addFriend?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Таны найз байна</a>
+                                <?php 
+                                   $me = $sf_user->getAttribute('am_user');
+                                ?>
+                                
+                                
+                                <?php if($me->isMyFriend($user->id) ): ?>
+                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Таны найз байна</a>
+                                <?php elseif($me->isSendMeRequest($user->id)): ?>
+                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Хүсэлтийг хүлээж авах</a>
+                                <?php elseif($me->meSendRequest($user->id)): ?>
+                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Хүсэлт илгээсэн байна</a>
+                                <?php endif; ?>
 
                                 <div class="clear"></div>
                             </div>
