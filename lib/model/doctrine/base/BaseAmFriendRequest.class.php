@@ -45,6 +45,7 @@ abstract class BaseAmFriendRequest extends sfDoctrineRecord
              ));
         $this->hasColumn('is_accept', 'boolean', null, array(
              'type' => 'boolean',
+             'default' => false,
              ));
         $this->hasColumn('send_date', 'timestamp', null, array(
              'type' => 'timestamp',

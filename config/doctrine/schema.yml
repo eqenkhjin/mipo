@@ -145,12 +145,13 @@ AmFriendRequest:
   columns:
     sender_id:    { type: integer, notnull: true }
     receiver_id:  { type: integer, notnull: true } 
-    is_accept:    { type: boolean }
+    is_accept:    { type: boolean, default: false }
+    is_decline:   { type: boolean, default: false  }
     send_date:    { type: timestamp }
     received_date: { type: timestamp }
   relations:
     AmUser:       { local: sender_id, foreign: id, alias: Sender }
-    AmUser:       { local: receiver_id, foreign: id, alias: Receiver }
+    AmUser:       { local: receiver_id, foreignx: id, alias: Receiver }
   
   
 
