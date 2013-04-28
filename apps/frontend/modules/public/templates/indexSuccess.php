@@ -3,6 +3,13 @@
 
 <div class="row">
     
+    <?php if($sf_user->hasFlash('success')): ?>
+        <div class="alert alert-success">
+            <?php echo $sf_user->getFlash('success'); ?>
+        </div>
+        
+    <?php endif; ?>
+    
     <?php include_partial('public/search'); ?>
     
     <div class="wall-container">

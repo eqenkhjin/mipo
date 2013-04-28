@@ -12,9 +12,44 @@
  */
 class AmUser extends BaseAmUser
 {
-  public function isMyFriend($check_user_id = 0)
+  public function isMyFriend($user_id = 0)
   {
+      if($user_id == 0) return false;
       
+      $q = AmUserToUserTable::getInstance()->createQuery();
+      $q->addWhere('user_1 = ?', sfContext::getInstance()->getUser()->getId());
+      $q->addWhere('user_2 = ?', $user_id);
+      
+      return ($q->count() > 0)?true:false;
+  }
+  
+  
+  /* Энэ хэрэглэгчи нэвтэрсэн хэрэглэгч рүү найзын хүсэлт илгээсэн */
+  public function isRequestFriend($user_id = 0)
+  {
+      if($user_id == 0) return false;
+      
+      $me_id = sfContext::getInstance()->getUser()->getId();
+      
+      $q = AmFriendRequestTable::getInstance()->createQuery();
+      $q->addWhere('receiver_id = ?', $me_id);
+      $q->addWhere('sender_id = ?', $user_id);
+      
+      return ($q->count() > 0)?true:false;
+  }
+  
+  /* Нэвтэрсэн хэрэглэгч энэ хэрэглэгчрүү найзын хүсэлт илгээсэн байна */
+  public function isResponseFriend($user_id = 0)
+  {
+      if($user_id == 0) return false;
+      
+      $me_id = sfContext::getInstance()->getUser()->getId();
+      
+      $q = AmFriendRequestTable::getInstance()->createQuery();
+      $q->addWhere('receiver_id = ?', $user_id);
+      $q->addWhere('sender_id = ?', $me_id);
+      
+      return ($q->count() > 0)?true:false;
   }
     
     

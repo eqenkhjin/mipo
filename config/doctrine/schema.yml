@@ -1,3 +1,4 @@
+
 #user 
 AmUser:
   actAs:
@@ -23,10 +24,10 @@ AmUser:
     avatar:               { type: string(255), default: '/images/no-profile.jpg' }
     small_avatar:         { type: string(255), default: '/images/no-profile-small.jpg' }
     large_avatar:         { type: string(255), default: '/images/no-profile.jpeg' }
-    mgl_avatar:               { type: string(255) }
-    mgl_small_avatar:         { type: string(255) }
-    mgl_large_avatar:         { type: string(255) }
-    rregistered_at:        { type: timestamp }  
+    mgl_avatar:           { type: string(255) }
+    mgl_small_avatar:     { type: string(255) }
+    mgl_large_avatar:     { type: string(255) }
+    rregistered_at:       { type: timestamp }  
     verified:             { type: boolean, default: false }
   relations:
     AmGroups:             { refClass: AmGroupUserConn, class: AmGroup, local: user_id, foreign: group_id }
@@ -151,7 +152,7 @@ AmFriendRequest:
     received_date: { type: timestamp }
   relations:
     AmUser:       { local: sender_id, foreign: id, alias: Sender }
-    AmUser:       { local: receiver_id, foreignx: id, alias: Receiver }
+    AmUser:       { local: receiver_id, foreign: id, alias: Receiver }
   
   
 

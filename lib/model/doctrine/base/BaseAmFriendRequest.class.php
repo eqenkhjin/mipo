@@ -8,6 +8,7 @@
  * @property integer $sender_id
  * @property integer $receiver_id
  * @property boolean $is_accept
+ * @property boolean $is_decline
  * @property timestamp $send_date
  * @property timestamp $received_date
  * @property AmUser $Receiver
@@ -15,12 +16,14 @@
  * @method integer         getSenderId()      Returns the current record's "sender_id" value
  * @method integer         getReceiverId()    Returns the current record's "receiver_id" value
  * @method boolean         getIsAccept()      Returns the current record's "is_accept" value
+ * @method boolean         getIsDecline()     Returns the current record's "is_decline" value
  * @method timestamp       getSendDate()      Returns the current record's "send_date" value
  * @method timestamp       getReceivedDate()  Returns the current record's "received_date" value
  * @method AmUser          getReceiver()      Returns the current record's "Receiver" value
  * @method AmFriendRequest setSenderId()      Sets the current record's "sender_id" value
  * @method AmFriendRequest setReceiverId()    Sets the current record's "receiver_id" value
  * @method AmFriendRequest setIsAccept()      Sets the current record's "is_accept" value
+ * @method AmFriendRequest setIsDecline()     Sets the current record's "is_decline" value
  * @method AmFriendRequest setSendDate()      Sets the current record's "send_date" value
  * @method AmFriendRequest setReceivedDate()  Sets the current record's "received_date" value
  * @method AmFriendRequest setReceiver()      Sets the current record's "Receiver" value
@@ -44,6 +47,10 @@ abstract class BaseAmFriendRequest extends sfDoctrineRecord
              'notnull' => true,
              ));
         $this->hasColumn('is_accept', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
+             ));
+        $this->hasColumn('is_decline', 'boolean', null, array(
              'type' => 'boolean',
              'default' => false,
              ));

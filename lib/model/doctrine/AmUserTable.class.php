@@ -22,6 +22,8 @@ class AmUserTable extends Doctrine_Table
     
     public function __search($query)
     {
+        /* SELECT * FROM am_user WHERE email like %%  */
+//        $sql  = 'SELECT * FROM am_user WHERE (email like %'.$query.'% OR firstname like %'.$query.'%) AND id <>  ';
         $q = self::getInstance()->createQuery();
         $q->where('email like ? OR firstname like ? OR lastname like ?', array('%'.$query.'%','%'.$query.'%','%'.$query.'%'));
         $q->addWhere('id <> ?', sfContext::getInstance()->getUser()->getId());

@@ -17,6 +17,13 @@ class publicActions extends sfActions
   */
   public function preExecute(){
   }  
+  
+  public function executeTest()
+  {
+      echo time();
+      
+      die;
+  }
     
   public function executeIndex(sfWebRequest $request)
   {
@@ -28,6 +35,7 @@ class publicActions extends sfActions
       $q = $request->getParameter('q');
       
       $this->user_result = AmUserTable::getInstance()->__search($q);
+      
       $this->group_result = AmGroupTable::getInstance()->__search($q);
 //      $this->user_result = AmUserTable::getInstance()->searchQuery($q);
   }

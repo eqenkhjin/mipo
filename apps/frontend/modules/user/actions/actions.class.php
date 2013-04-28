@@ -10,6 +10,42 @@
  */
 class userActions extends sfActions
 {
+  public function executeSendRequest(sfWebRequest $request)
+  {
+      $id = $request->getParameter('id');
+      $me_id = $this->getUser()->getId();
+      
+      $fr = new AmFriendRequest();
+      $fr->setSenderId($me_id);
+      $fr->setReceiverId($id);
+      $fr->setSendDate(time());
+      $fr->save();
+      
+      $this->getUser()->setFlash('success', 'Найзын хүсэлт явууллаа');
+      $this->redirect('@homepage');
+  }
+  
+  public function executeGetResponse(sfWebRequest $request)
+  {
+      $id = $request->getParameter('id');
+      $me_id = $this->getUser()->getId();
+  
+      
+      
+      $friend_request = AmFriendRequestTable::getInstance()->getFriendRequest($id, $me_id);
+      
+      $this->forward404Unless($friend_request);
+      
+//      $friend_request->is_accept = true;
+      $friend_request->setIsAccept(true);
+      $friend_request->received_date = time();
+      $friend_request->save();
+      
+      
+      $this->getUser()->setFlash('success', 'Найзын хүсэлт явууллаа');
+      $this->redirect('@homepage');
+  }
+    
     
   public function executeAddFriend(sfWebRequest $request)
   {

@@ -10,6 +10,15 @@ class myUser extends sfBasicSecurityUser
     $this->clearCredentials();
   }
   
+  public function getAmUser()
+  {
+      if($this->getAttribute('am_user')){
+          return $this->getAttribute('am_user');
+      }else{
+          return false;
+      }
+  }
+  
   public function signIn($user)
   {
     /* set name */

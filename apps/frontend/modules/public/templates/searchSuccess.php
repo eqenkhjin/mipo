@@ -1,3 +1,18 @@
+<?php 
+
+///// template
+//$sf_user;
+///// action
+//$this->getUser();
+///// Model
+//sfContext::getInstance()->getUser();
+//
+
+?>
+<?php 
+   $me = $sf_user->getAmUser();
+?>
+
 <div class="row">
     <div class="offset1">
         <h2>Хүмүүс</h2>
@@ -26,17 +41,16 @@
                                     <dd>Програм хангамж</dd>
                                 </dl>
 
-                                <?php 
-                                   $me = $sf_user->getAttribute('am_user');
-                                ?>
                                 
                                 
                                 <?php if($me->isMyFriend($user->id) ): ?>
                                     <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Таны найз байна</a>
-                                <?php elseif($me->isSendMeRequest($user->id)): ?>
-                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Хүсэлтийг хүлээж авах</a>
-                                <?php elseif($me->meSendRequest($user->id)): ?>
-                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-success">Хүсэлт илгээсэн байна</a>
+                                <?php elseif($me->isRequestFriend($user->id)): ?>
+                                    <a href="<?php echo url_for('user/getResponse?id=' . $user->id); ?>" style="float: right;" class="btn">Хүсэлтийг хүлээж авах</a>
+                                <?php elseif($me->isResponseFriend($user->id)): ?>
+                                    <a href="<?php echo url_for('user/profile?id=' . $user->id); ?>" style="float: right;" class="btn btn-primary">Хүсэлт илгээсэн байна</a>
+                                <?php else: ?>
+                                    <a href="<?php echo url_for('user/sendRequest?id=' . $user->id); ?>" style="float: right;" class="btn">Найзын хүсэлт илгээх</a>
                                 <?php endif; ?>
 
                                 <div class="clear"></div>
